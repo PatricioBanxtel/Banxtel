@@ -97,6 +97,48 @@
           <p class="section-subtitle">
             Have questions? We're here to help you get the best currency exchange rates.
           </p>
+
+          <form class="lead-form" id="lead-form" action="https://formspree.io/f/xzebnakg" method="POST" novalidate>
+            <div class="lead-form__row">
+              <div class="lead-form__field">
+                <label class="lead-form__label" for="lf-name">Name</label>
+                <input class="lead-form__input" type="text" id="lf-name" name="name" autocomplete="name" required />
+              </div>
+
+              <div class="lead-form__field">
+                <label class="lead-form__label" for="lf-email">Email</label>
+                <input class="lead-form__input" type="email" id="lf-email" name="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <fieldset class="lead-form__field lead-form__fieldset">
+              <legend class="lead-form__label">Do you or your company send money to Mexico?</legend>
+              <div class="lead-form__toggle">
+                <label class="lead-form__toggle-option">
+                  <input type="radio" name="sends_to_mexico" value="Yes" required />
+                  <span>Yes</span>
+                </label>
+                <label class="lead-form__toggle-option">
+                  <input type="radio" name="sends_to_mexico" value="No" required />
+                  <span>No</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="lead-form__field">
+              <label class="lead-form__label" for="lf-other">Other <span class="lead-form__hint">(optional)</span></label>
+              <textarea class="lead-form__input lead-form__textarea" id="lf-other" name="other" rows="3" placeholder="Anything else we should know?"></textarea>
+            </div>
+
+            <!-- Honeypot field to deter simple spam bots; left blank by real users -->
+            <input class="lead-form__honeypot" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+            <div class="lead-form__actions">
+              <button class="btn btn--primary lead-form__submit" type="submit">Send</button>
+              <p class="lead-form__status" id="lead-form-status" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+
           <div class="contact__grid">
             <article class="card contact__card">
               <div class="card__icon" aria-hidden="true">
@@ -167,5 +209,3 @@
     <script src="./js/main.js"></script>
   </body>
   </html>
-
-
