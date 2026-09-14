@@ -66,14 +66,14 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
           return response.json().then(function (body) {
             var message = (body && body.errors && body.errors.length)
               ? body.errors.map(function (err) { return err.message; }).join(', ')
-              : 'Something went wrong. Please email us directly at support@banxtel.com.';
+              : 'Something went wrong. Please email us directly at support@banxtel.io.';
             status.textContent = message;
             status.setAttribute('data-state', 'error');
           });
         }
       })
       .catch(function () {
-        status.textContent = 'Something went wrong. Please email us directly at support@banxtel.com.';
+        status.textContent = 'Something went wrong. Please email us directly at support@banxtel.io.';
         status.setAttribute('data-state', 'error');
       })
       .finally(function () {
